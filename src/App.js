@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import Main from "./components/Main";
 import Food from "./components/Food";
-import Exm from './components/Exm'
+import Footer from './components/Footer';
 
 
 function App() {
@@ -13,6 +13,7 @@ function App() {
       <Hero />
       <Main />
       <Food />
+      <Footer />
     </div>
   );
 }

@@ -19,7 +19,7 @@ export default function Navbar() {
   }
 
   return (
-    <div className="bg-red-500">
+    <div className="bg-red-500 z-100">
       <div className=" w-[95%] flex justify-between items-center p-4 m-auto">
         <div className="flex items-center gap-5">
           {nav ? <AiOutlineMenu size={25} onClick={toggle} /> : <AiOutlineClose size={25} onClick={toggle} />}
@@ -37,22 +37,17 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="flex bg-white rounded-full p-2">
-          <AiOutlineSearch size={20} />
-          <input
-            className="rounded-full w-[150px] 
-                sm:w-[250px] md:w-[300px] text-center "
-            type="text"
-            placeholder="Search Your Favorite Recipe"
-          />
-        </div>
+       
 
         <div className="flex items-center font-semibold">
           <BsFillCartFill size={25} />
           <p className="text-2xl px-2">Cart</p>
         </div>
+         
+ <div className={!nav ? " bg-red-500  h-[500px] fixed top-[57px] left-0 py-[50px] pl-[20px] z-10" : ' left-[-100px] hidden'}>
+          
+          
 
- <div className={!nav ? "absolute top-[100px] " : ' hidden'}>
           <ul className="flex flex-col p-4 text-gray-800 ">
 
             <li className="text-2xl py-5 flex gap-6 font-bold">
@@ -85,42 +80,3 @@ export default function Navbar() {
   );
 }
 
-/*
-<div className="w-full bg-red-500 flex justify-between p-4 items-center">
-      <div className="flex gap-7 items-center max-md:gap-4">
-        <div className="text-white">
-          <AiOutlineMenu size={30} onClick={() => setNav(!nav)} />
-        </div>
-
-        <h1 className="text-3xl font-bold max-md:text-xl"> Best Eat Restaurant </h1>
-
-        <div className="flex items-center text-xl bg-white rounded-full">
-          <p className="bg-black/30 text-white rounded-full p-2">Delivery</p>
-          <p className="p-2">Pickup</p>
-        </div>
-      </div>
-
-      <div className="bg-gray-200 rounded-full flex items-center px-2 w-[200px] sm:w-[400px] lg:w-[500px]">
-        <AiOutlineSearch size={25} />
-        <input
-          className="bg-transparent p-2 w-full focus:outline-none"
-          type="text"
-          placeholder="Search foods"
-        />
-      </div>
-
-      <button className=" text-white  flex items-center max-md:hidden ">
-        <BsFillCartFill size={30} className="mr-2" /> Cart
-      </button>
-
-      <div className="hidden">
-        <AiOutlineClose />
-        <h2 className="text-2xl p-4">
-          Best <span className="font-bold">Eats</span>
-        </h2>
-
-       
-      </div>
-    </div>
-
-*/

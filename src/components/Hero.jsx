@@ -5,7 +5,7 @@ export default function Hero() {
 
    
 
-        <div className='max-w-full mx-auto'>
+        <div className='max-w-full mx-auto '>
         
         <div className='max-h-[500px] relative'>
           
