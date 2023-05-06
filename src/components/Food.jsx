@@ -98,24 +98,24 @@ export default function Food(props) {
         </button>
 
         <button
-          onClick={filterItemPrice}
+          onClick={() => filterItemPrice('$300')}
           className="bg-gray-400 p-2 rounded-full m-2 font-bold shadow-lg "
         >
-          Chicken
+          $300
         </button>
 
         <button
-          onClick={() => filterItem("$62")}
+          onClick={() => filterItemPrice("$200")}
           className="bg-gray-400 p-2 rounded-full m-2 font-bold shadow-lg "
         >
-          $42
+          $200
         </button>
 
         <button
-          onClick={() => filterItem("$42")}
+          onClick={() => filterItemPrice("$100")}
           className="bg-gray-400 p-2 rounded-full m-2 font-bold shadow-lg "
         >
-          $42
+          $100
         </button>
       </div>
 
